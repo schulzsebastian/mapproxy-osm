@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  mapproxy:
+    container_name: mapproxy
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./configuration:/mapproxy
+    ports:
+      - 8080:8080
